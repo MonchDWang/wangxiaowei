@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_demo
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource #可以省略
+
+#  mapper映射文件一定需要在yml加载
+#mybatis:
+#  mapper-locations: /mapper/**
+#  type-aliases-package: cn.itcast.pojo  # 实体类别名
+#  configuration:
+ #  map-underscore-to-camel-case: true #使用了驼峰标识

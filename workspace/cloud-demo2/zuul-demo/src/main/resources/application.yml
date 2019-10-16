@@ -1,0 +1,25 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: zuul-demo
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka
+zuul:
+  ignored-services:
+   - eureka-server
+  prefix: /api
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 2000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1

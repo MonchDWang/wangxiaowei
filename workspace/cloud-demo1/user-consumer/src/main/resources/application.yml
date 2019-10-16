@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: user-consumer
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka  #注册中心项目的地址
+    fetch-registry: true # 需要拉取
+    register-with-eureka: true  # 需要注册
+user-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

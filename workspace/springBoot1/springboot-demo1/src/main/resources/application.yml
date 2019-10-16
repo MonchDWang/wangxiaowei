@@ -1,0 +1,12 @@
+server:
+ port: 8080
+user:
+ username: lisi
+ age: 20
+ girls:
+  - rose
+  - xiaopan
+  - xiaorong
+logging:
+  level:
+   cn.itcast: debug
